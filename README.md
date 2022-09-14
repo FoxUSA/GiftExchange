@@ -1,6 +1,10 @@
-# Gift Exchange Generator
+# [Gift Exchange Generator][pages]
 
-A 'Secret Santa' style gift exchange picker/matcher where you don't have to give a random service your emails. You can self host it or just use it here on GitHub. Instead of drawing just one name it is configurable. 1,2,3,4+ assignments, no problem.
+[![A demo of generating a list and clicking to reveal who I picked](./docs/images/demo.gif)][pages]
+
+A responsive 'Secret Santa' style gift exchange picker/matcher where you don't have to give a random service your emails. You can self host it or just use it [here on GitHub][pages]. Instead of drawing just one name it is configurable. 1,2,3,4+ assignments, no problem.
+
+[Demo/App/Its right here just click it.][pages]
 
 ## Matching requirements
 - Picks are random
@@ -18,6 +22,7 @@ A 'Secret Santa' style gift exchange picker/matcher where you don't have to give
 >
 > Special thanks to [arcanis' secretsanta](https://github.com/arcanis/secretsanta) for inspiration.
 
+[pages]: https://foxusa.github.io/GiftExchange/dist/
 
 ---
 

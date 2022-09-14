@@ -35,7 +35,7 @@
           Gift Exchange Generator
         </h2>
         <p>
-          Gone are the days from picking names from a hat! Pick your secret santa as code(SSaC)!
+          Gone are the days from picking names from a hat! Pick your Secret Santa as Code(SSaC)!
         </p>
 
         <p>
@@ -52,11 +52,11 @@
         </v-card>
 
         <p class="py-4">
-          Special thanks to <a href="https://github.com/arcanis/secretsanta">arcanis' secretsanta</a> for inspiration.
+          Special thanks to <a href="https://github.com/arcanis/secretsanta">arcanis' secretsanta</a> for inspiration. Browse this apps <a href="https://github.com/FoxUSA/GiftExchange">source code on GitHub.</a>
         </p>
 
         <p>
-          Privacy: nothing is collected or stored by this app. The information is encoded in the link itself.
+          Privacy: nothing is collected or stored by this app. The information is encoded in the link itself. 
         </p>
 
         <p class="py-4">
