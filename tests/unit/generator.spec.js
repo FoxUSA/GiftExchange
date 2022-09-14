@@ -72,9 +72,9 @@ describe('Generator.vue', () => {
     const testOject = yaml.load(testData)
 
     const numberTests = 1000
-    const maxNumberOfexcludes = 2
+    const maxNumberOfExcludes = 2
     for (let i = 0; i < numberTests; i++) {
-      const giftNumber = Math.floor(Math.random() * (Object.keys(testOject).length - 1 - maxNumberOfexcludes)) + 1 // Can be between 1-(n-1-e)
+      const giftNumber = Math.floor(Math.random() * (Object.keys(testOject).length - 1 - maxNumberOfExcludes)) + 1 // Can be between 1-(n-1-e)
       console.log(`Number of keys ${Object.keys(testOject).length}. Picked test number: ${giftNumber}`)
       const output = wrapper.vm.match(testOject, giftNumber)
 

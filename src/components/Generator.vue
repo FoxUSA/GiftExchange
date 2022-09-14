@@ -56,7 +56,7 @@
         </p>
 
         <p>
-          Privacy: nothing is collected or stored by this app. The information is encoded in the link itself. 
+          Privacy: nothing is collected or stored by this app. The information is encoded in the link itself.
         </p>
 
         <p class="py-4">
@@ -128,7 +128,7 @@ brother:`
     const url = new URL(window.location.href)
     try {
       this.person = url.searchParams.get('person')
-      this.picks = JSON.parse(decodeURIComponent(escape(atob(url.searchParams.get('picks')))))
+      this.picks = JSON.parse(decodeURIComponent(escape(atob(decodeURIComponent(url.searchParams.get('picks')))))) // Per https://stackoverflow.com/questions/56647747/how-to-base64-encode-emojis-in-javascript
     } catch (error) {
       // Ignore
     }
@@ -157,7 +157,7 @@ brother:`
       }
 
       for (const person in matches) {
-        this.links[person] = `${window.location.href}?person=${person}&picks=${window.btoa(unescape(encodeURIComponent(JSON.stringify(matches[person]))))}`
+        this.links[person] = `${window.location.href}?person=${person}&picks=${encodeURIComponent(window.btoa(unescape(encodeURIComponent(JSON.stringify(matches[person])))))}`
       }
     },
     match (rules, giftCount = 1) {
