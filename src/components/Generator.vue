@@ -35,7 +35,7 @@
           Gift Exchange Generator
         </h2>
         <p>
-          Gone are the days from picking names from a hat! Pick your secret santa as code(SSaC)!
+          Gone are the days from picking names from a hat! Pick your Secret Santa as Code(SSaC)!
         </p>
 
         <p>
@@ -52,7 +52,7 @@
         </v-card>
 
         <p class="py-4">
-          Special thanks to <a href="https://github.com/arcanis/secretsanta">arcanis' secretsanta</a> for inspiration.
+          Special thanks to <a href="https://github.com/arcanis/secretsanta">arcanis' secretsanta</a> for inspiration. Browse this apps <a href="https://github.com/FoxUSA/GiftExchange">source code on GitHub.</a>
         </p>
 
         <p>
@@ -128,7 +128,7 @@ brother:`
     const url = new URL(window.location.href)
     try {
       this.person = url.searchParams.get('person')
-      this.picks = JSON.parse(decodeURIComponent(escape(atob(url.searchParams.get('picks')))))
+      this.picks = JSON.parse(decodeURIComponent(escape(atob(decodeURIComponent(url.searchParams.get('picks')))))) // Per https://stackoverflow.com/questions/56647747/how-to-base64-encode-emojis-in-javascript
     } catch (error) {
       // Ignore
     }
@@ -157,7 +157,7 @@ brother:`
       }
 
       for (const person in matches) {
-        this.links[person] = `${window.location.href}?person=${person}&picks=${window.btoa(unescape(encodeURIComponent(JSON.stringify(matches[person]))))}`
+        this.links[person] = `${window.location.href}?person=${person}&picks=${encodeURIComponent(window.btoa(unescape(encodeURIComponent(JSON.stringify(matches[person])))))}`
       }
     },
     match (rules, giftCount = 1) {
