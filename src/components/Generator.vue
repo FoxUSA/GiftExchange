@@ -225,3 +225,20 @@ brother:`
   }
 }
 </script>
+
+<style>
+/* Fade everything */
+.v-application * {  /* Just on application prevents blink. Prevent a white blink 2/2*/
+  animation: fadein .5s;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+</style>

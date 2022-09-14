@@ -26,7 +26,7 @@ const testData = `
       h:
         exclude: 
           - g
-      i:
+      🛑i:
         exclude: 
           - j
       j:
